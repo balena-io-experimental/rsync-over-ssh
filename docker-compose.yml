@@ -1,0 +1,12 @@
+version: '2'
+services:
+  rsync:
+    restart: always
+    build: ./rsync
+    privileged: true
+    ports:
+      - 122:122
+    volumes:
+      - resin-data:/data
+volumes:
+  resin-data:
