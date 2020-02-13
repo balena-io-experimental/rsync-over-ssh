@@ -3,7 +3,7 @@ Use rsync to send data from local machine to balena edge device
 
 This sample project installs sshd in container and configures it to listen on port 122. The daemon can be used to receive data stream from rsync.
 
-replace authorized_keys file in rsync directory with your public ssh key (~/.ssh/id_rsa.pub by default)
+Replace authorized_keys file in rsync directory with your public ssh key (~/.ssh/id_rsa.pub by default), or add your public key to /root/.ssh/authorized_keys file once container is running.
 
 The sshd isn't started by deamon so here's full procedure to send local data once the container runs:
 
